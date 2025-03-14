@@ -13,13 +13,16 @@ for i in range(test_case):
 
 
     def solve(a, n, m):
-        if n == 1: return a % m
+        if n == 1: 
+            return a % m
 
         half = n//2
         res_half = solve(a, half, m)
         maxi = exp(a, half, m)
 
-        if n % 2: return (res_half + maxi*res_half + exp(a, n, m)) % m
-        else: return (res_half + maxi*res_half) % m
+        if n % 2: 
+            return (res_half + maxi*res_half + exp(a, n, m)) % m
+        else: 
+            return (res_half + maxi*res_half) % m
 
     print(solve(a, n, m))
